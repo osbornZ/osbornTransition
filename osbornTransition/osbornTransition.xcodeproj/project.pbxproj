@@ -13,8 +13,10 @@
 		84F40C731F4BDB130054954B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F40C711F4BDB130054954B /* Main.storyboard */; };
 		84F40C751F4BDB130054954B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F40C741F4BDB130054954B /* Assets.xcassets */; };
 		84F40C781F4BDB130054954B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F40C761F4BDB130054954B /* LaunchScreen.storyboard */; };
-		84F40C811F4C33590054954B /* TransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C801F4C33590054954B /* TransitionSegue.m */; };
-		84F40C841F4C521F0054954B /* CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C831F4C521F0054954B /* CustomerViewController.m */; };
+		84F40C881F4C54240054954B /* CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C871F4C54240054954B /* CustomerViewController.m */; };
+		84F40C8C1F4C54690054954B /* TransitionSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C8B1F4C54690054954B /* TransitionSegue.m */; };
+		84F40C901F4C55EF0054954B /* LastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C8E1F4C55EF0054954B /* LastViewController.m */; };
+		84F40C911F4C55EF0054954B /* LastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F40C8F1F4C55EF0054954B /* LastViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,13 @@
 		84F40C741F4BDB130054954B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F40C771F4BDB130054954B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F40C791F4BDB130054954B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84F40C7F1F4C33590054954B /* TransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionSegue.h; sourceTree = "<group>"; };
-		84F40C801F4C33590054954B /* TransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionSegue.m; sourceTree = "<group>"; };
-		84F40C821F4C521F0054954B /* CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerViewController.h; sourceTree = "<group>"; };
-		84F40C831F4C521F0054954B /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
+		84F40C861F4C54240054954B /* CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerViewController.h; sourceTree = "<group>"; };
+		84F40C871F4C54240054954B /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
+		84F40C8A1F4C54690054954B /* TransitionSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionSegue.h; sourceTree = "<group>"; };
+		84F40C8B1F4C54690054954B /* TransitionSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionSegue.m; sourceTree = "<group>"; };
+		84F40C8D1F4C55EF0054954B /* LastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastViewController.h; sourceTree = "<group>"; };
+		84F40C8E1F4C55EF0054954B /* LastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastViewController.m; sourceTree = "<group>"; };
+		84F40C8F1F4C55EF0054954B /* LastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LastViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,15 +73,13 @@
 				84F40C6C1F4BDB130054954B /* AppDelegate.m */,
 				84F40C6E1F4BDB130054954B /* ViewController.h */,
 				84F40C6F1F4BDB130054954B /* ViewController.m */,
-				84F40C7F1F4C33590054954B /* TransitionSegue.h */,
-				84F40C801F4C33590054954B /* TransitionSegue.m */,
+				84F40C851F4C54060054954B /* ViewControllerManager */,
+				84F40C891F4C54690054954B /* TransitionManager */,
 				84F40C711F4BDB130054954B /* Main.storyboard */,
 				84F40C741F4BDB130054954B /* Assets.xcassets */,
 				84F40C761F4BDB130054954B /* LaunchScreen.storyboard */,
 				84F40C791F4BDB130054954B /* Info.plist */,
 				84F40C681F4BDB130054954B /* Supporting Files */,
-				84F40C821F4C521F0054954B /* CustomerViewController.h */,
-				84F40C831F4C521F0054954B /* CustomerViewController.m */,
 			);
 			path = osbornTransition;
 			sourceTree = "<group>";
@@ -87,6 +90,27 @@
 				84F40C691F4BDB130054954B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84F40C851F4C54060054954B /* ViewControllerManager */ = {
+			isa = PBXGroup;
+			children = (
+				84F40C861F4C54240054954B /* CustomerViewController.h */,
+				84F40C871F4C54240054954B /* CustomerViewController.m */,
+				84F40C8D1F4C55EF0054954B /* LastViewController.h */,
+				84F40C8E1F4C55EF0054954B /* LastViewController.m */,
+				84F40C8F1F4C55EF0054954B /* LastViewController.xib */,
+			);
+			path = ViewControllerManager;
+			sourceTree = "<group>";
+		};
+		84F40C891F4C54690054954B /* TransitionManager */ = {
+			isa = PBXGroup;
+			children = (
+				84F40C8A1F4C54690054954B /* TransitionSegue.h */,
+				84F40C8B1F4C54690054954B /* TransitionSegue.m */,
+			);
+			path = TransitionManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +174,7 @@
 			files = (
 				84F40C781F4BDB130054954B /* LaunchScreen.storyboard in Resources */,
 				84F40C751F4BDB130054954B /* Assets.xcassets in Resources */,
+				84F40C911F4C55EF0054954B /* LastViewController.xib in Resources */,
 				84F40C731F4BDB130054954B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,11 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F40C811F4C33590054954B /* TransitionSegue.m in Sources */,
 				84F40C701F4BDB130054954B /* ViewController.m in Sources */,
 				84F40C6D1F4BDB130054954B /* AppDelegate.m in Sources */,
 				84F40C6A1F4BDB130054954B /* main.m in Sources */,
-				84F40C841F4C521F0054954B /* CustomerViewController.m in Sources */,
+				84F40C8C1F4C54690054954B /* TransitionSegue.m in Sources */,
+				84F40C901F4C55EF0054954B /* LastViewController.m in Sources */,
+				84F40C881F4C54240054954B /* CustomerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
