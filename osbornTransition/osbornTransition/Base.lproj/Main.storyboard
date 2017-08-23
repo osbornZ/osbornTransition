@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQJ-70-bIP">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="HomeCustomerSegueBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQJ-70-bIP">
                                 <rect key="frame" x="157" y="536" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56144831730769229" blue="0.63193609775641024" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,7 +31,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="KTl-Qe-1f0" kind="custom" id="5Wd-ed-rOd"/>
+                                    <segue destination="KTl-Qe-1f0" kind="custom" customClass="TransitionSegue" id="5Wd-ed-rOd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-Xo-9xY">
@@ -64,7 +64,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="9ij-dC-kYW" kind="push" id="57Z-B7-MtG"/>
+                                    <segue destination="9ij-dC-kYW" kind="push" identifier="DefaultSegue" id="57Z-B7-MtG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,8 +77,9 @@
                     <navigationItem key="navigationItem" id="Las-jq-QtU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="pV6-Jn-p8T" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-578.39999999999998" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-727" y="135"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HAM-Wg-fPj">
@@ -99,6 +100,14 @@
                                 <color key="textColor" red="1" green="0.92916165865384615" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCQ-ku-NJw">
+                                <rect key="frame" x="15" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="pV6-Jn-p8T" kind="unwind" unwindAction="unwindToHome:" id="V4b-8R-Ox6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.27450980390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -106,12 +115,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cia-aI-bHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365.60000000000002" y="63.418290854572717"/>
+            <point key="canvasLocation" x="852" y="-12"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer View Controller-->
         <scene sceneID="5zt-VP-lul">
             <objects>
-                <viewController id="KTl-Qe-1f0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CustomerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KTl-Qe-1f0" customClass="CustomerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hEd-0s-S9g"/>
                         <viewControllerLayoutGuide type="bottom" id="BS6-gW-lv0"/>
@@ -127,13 +136,21 @@
                                 <color key="textColor" red="0.20733173076923078" green="0.040089142628205128" blue="0.028720953525641024" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqX-xH-vwe">
+                                <rect key="frame" x="15" y="20" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="pV6-Jn-p8T" kind="unwind" unwindAction="unwindToHome:" id="GEh-rC-Lr8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0034630557056516409" green="0.62856286764144897" blue="0.69512850046157837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVL-Ik-g5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="719"/>
+            <point key="canvasLocation" x="438" y="702"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eJ6-UR-e02">
@@ -150,6 +167,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx9-qq-x0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1465" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5CP-4N-tBB">
+            <objects>
+                <viewController id="B0u-cA-tRs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WrV-2l-cW8"/>
+                        <viewControllerLayoutGuide type="bottom" id="zqn-b5-Te6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I5R-fR-qqD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXd-cR-Due" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
