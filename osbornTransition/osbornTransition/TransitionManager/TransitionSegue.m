@@ -95,9 +95,10 @@
         [self.circleView removeFromSuperview];
     }else {
         [self.iconView   removeFromSuperview];
-        [self.toVC.view addSubview:self.circleView];
+        [self.circleView removeFromSuperview];
+//        [self.toVC.view addSubview:self.circleView];
         [self.fromVC.navigationController pushViewController:self.toVC animated:NO];
-        [self hiddenCircleAnimation];
+//        [self hiddenCircleAnimation];
     }
 }
 

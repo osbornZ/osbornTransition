@@ -34,7 +34,7 @@
                                     <segue destination="KTl-Qe-1f0" kind="custom" customClass="TransitionSegue" id="5Wd-ed-rOd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-Xo-9xY">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="HomeVCGrayLightBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-Xo-9xY">
                                 <rect key="frame" x="276" y="536" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,6 +43,9 @@
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionToLastVc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTu-Ym-4sO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transition Three Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtA-JV-yrH">
                                 <rect key="frame" x="71" y="195" width="233" height="68"/>
@@ -75,6 +78,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Las-jq-QtU"/>
+                    <connections>
+                        <outlet property="lastVcBtn" destination="cFV-Xo-9xY" id="3BQ-re-tbF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="pV6-Jn-p8T" userLabel="Exit" sceneMemberID="exit"/>
@@ -184,6 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXd-cR-Due" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-727" y="820"/>
         </scene>
     </scenes>
 </document>

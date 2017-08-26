@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846BDD741F51487900E595DB /* BaseAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 846BDD731F51487900E595DB /* BaseAnimationTransition.m */; };
 		84F40C6A1F4BDB130054954B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C691F4BDB130054954B /* main.m */; };
 		84F40C6D1F4BDB130054954B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C6C1F4BDB130054954B /* AppDelegate.m */; };
 		84F40C701F4BDB130054954B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F40C6F1F4BDB130054954B /* ViewController.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		846BDD721F51487900E595DB /* BaseAnimationTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAnimationTransition.h; sourceTree = "<group>"; };
+		846BDD731F51487900E595DB /* BaseAnimationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAnimationTransition.m; sourceTree = "<group>"; };
 		84F40C651F4BDB130054954B /* osbornTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osbornTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F40C691F4BDB130054954B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F40C6B1F4BDB130054954B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 			children = (
 				84F40C8A1F4C54690054954B /* TransitionSegue.h */,
 				84F40C8B1F4C54690054954B /* TransitionSegue.m */,
+				846BDD721F51487900E595DB /* BaseAnimationTransition.h */,
+				846BDD731F51487900E595DB /* BaseAnimationTransition.m */,
 			);
 			path = TransitionManager;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846BDD741F51487900E595DB /* BaseAnimationTransition.m in Sources */,
 				84F40C701F4BDB130054954B /* ViewController.m in Sources */,
 				84F40C6D1F4BDB130054954B /* AppDelegate.m in Sources */,
 				84F40C6A1F4BDB130054954B /* main.m in Sources */,
@@ -352,6 +358,7 @@
 				84F40C7E1F4BDB130054954B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
