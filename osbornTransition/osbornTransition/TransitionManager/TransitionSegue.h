@@ -14,8 +14,6 @@
 @property (assign, nonatomic) BOOL fadeOut;
 
 @property (strong, nonatomic) UIColor *buttonColor;
-@property (strong, nonatomic) NSString *buttonImageName;
-
 @property (weak, nonatomic) UIView *homeButton;
 
 @property (assign, nonatomic) CGRect buttonFrameOnScreen;

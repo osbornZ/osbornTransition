@@ -21,7 +21,6 @@
 @property (strong, nonatomic) CustomerViewController *toVC;
 
 @property (strong, nonatomic) UIView      *circleView;
-@property (strong, nonatomic) UIImageView *iconView;
 
 @end
 
@@ -43,31 +42,21 @@
         
     }else {
         
-        // 隐藏原来的按钮
         self.homeButton.hidden = YES;
         
-        // 创建圆形
         self.circleView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.circleView.backgroundColor = self.buttonColor;
-        
-        // 创建图标
-        self.iconView = [[UIImageView alloc] initWithFrame:self.buttonFrameOnScreen];
-        self.iconView.image = [UIImage imageNamed:self.buttonImageName];
-        self.iconView.layer.frame = self.buttonFrameOnScreen;
         
         CGFloat radius = sqrt(pow(ScreenWidth, 2) + pow(ScreenHeight, 2));
         CGRect fullRect = CGRectInset([[UIScreen mainScreen] bounds], ScreenWidth/2 - floor(radius), ScreenHeight/2 - floor(radius));
         UIBezierPath *startCycle = [UIBezierPath bezierPathWithOvalInRect:self.buttonFrameOnScreen];
         UIBezierPath *endCycle = [UIBezierPath bezierPathWithOvalInRect:fullRect];
-        
-        // 创建一个 CAShapeLayer 来负责展示圆形遮盖
+
         CAShapeLayer *maskLayer = [CAShapeLayer layer];
-        maskLayer.path = endCycle.CGPath; // 将它的 path 指定为最终的 path 来避免在动画完成后会回弹
+        maskLayer.path = endCycle.CGPath;
         self.circleView.layer.mask = maskLayer;
         
-        // 添加到视图
         [self.fromVC.view addSubview:self.circleView];
-        [self.fromVC.view addSubview:self.iconView];
         
         CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"path"];
         animation.fromValue = (__bridge id)([startCycle CGPath]);
@@ -75,13 +64,6 @@
         animation.duration =  0.2;
         animation.delegate = self;
         [maskLayer addAnimation:animation forKey:@"path"];
-        
-        CABasicAnimation *imageAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-        imageAnimation.fromValue = [self.iconView.layer valueForKey:@"position"];
-        imageAnimation.toValue   = [NSValue valueWithCGPoint:CGPointMake(ScreenWidth/2, ScreenHeight/2)];
-        imageAnimation.duration  =  0.2;
-        self.iconView.layer.position = CGPointMake(ScreenWidth/2, ScreenHeight/2);
-        [self.iconView.layer addAnimation:imageAnimation forKey:@"position"];
         
     }
 
@@ -94,7 +76,6 @@
     if ([[anim valueForKey:@"HiddenPath"] isEqualToString:@"circleBack"]) {
         [self.circleView removeFromSuperview];
     }else {
-        [self.iconView   removeFromSuperview];
         [self.circleView removeFromSuperview];
 //        [self.toVC.view addSubview:self.circleView];
         [self.fromVC.navigationController pushViewController:self.toVC animated:NO];

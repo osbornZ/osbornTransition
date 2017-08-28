@@ -12,6 +12,7 @@
 #import "BaseAnimationTransition.h"
 
 #import "LastViewController.h"
+#import "CustomerViewController.h"
 
 @interface ViewController ()<UINavigationControllerDelegate>
 
@@ -64,6 +65,17 @@
     
 }
 
+- (IBAction)actionCustomViewController:(id)sender {
+    
+    CustomerViewController *customerController = nil;
+    UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    customerController = [main instantiateViewControllerWithIdentifier:@"CustomerViewController"];
+    
+    [self.navigationController pushViewController:customerController animated:YES];
+}
+
+
+
 //StoryBoard unwind  action
 - (IBAction)unwindToHome:(UIStoryboardSegue *)unwindSegue {
     //This is the Test for unwind
@@ -74,7 +86,7 @@
 #pragma mark --UINavigationControllerDelegate
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
     
-    if ([toVC isKindOfClass:[LastViewController class]] ) {
+    if ([toVC isKindOfClass:[CustomerViewController class]] ) {
         return self.transitionAnimator;
     }
     
@@ -100,7 +112,6 @@
         CGRect startRect =  [self.view convertRect:_lastVcBtn.frame toView:self.view];
         transition.buttonFrameOnScreen = startRect;
         transition.buttonColor = [UIColor lightGrayColor];
-        transition.buttonImageName = @"xxx";
         transition.fadeOut = YES;
         transition.scrollToCamera = NO;
     }

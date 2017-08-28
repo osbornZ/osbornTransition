@@ -31,7 +31,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="KTl-Qe-1f0" kind="custom" customClass="TransitionSegue" id="5Wd-ed-rOd"/>
+                                    <action selector="actionCustomViewController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EE8-h8-6IB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="HomeVCGrayLightBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFV-Xo-9xY">
@@ -153,6 +153,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0034630557056516409" green="0.62856286764144897" blue="0.69512850046157837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kk3-fY-gwh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVL-Ik-g5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,24 +174,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx9-qq-x0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1465" y="124"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="5CP-4N-tBB">
-            <objects>
-                <viewController id="B0u-cA-tRs" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WrV-2l-cW8"/>
-                        <viewControllerLayoutGuide type="bottom" id="zqn-b5-Te6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="I5R-fR-qqD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FXd-cR-Due" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-727" y="820"/>
         </scene>
     </scenes>
 </document>

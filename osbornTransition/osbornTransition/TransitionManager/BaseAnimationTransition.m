@@ -42,10 +42,11 @@ static CGFloat const kInitialSpringVelocity = 0.5f;
 #pragma mark -- private Methods
 
 - (void)presentAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
-    
-//objc(1)
+ 
     UIViewController* toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController* fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+
+//objc(1)
     [[transitionContext containerView] addSubview:toViewController.view];
     toViewController.view.alpha = 0;
     
@@ -57,8 +58,7 @@ static CGFloat const kInitialSpringVelocity = 0.5f;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         
     }];
-    
-    
+/*
 //objc(2)
     // When sliding the views horizontally, in and out, figure out whether we are going left or right.
     BOOL goingRight = ([transitionContext initialFrameForViewController:toViewController].origin.x < [transitionContext finalFrameForViewController:toViewController].origin.x);
@@ -72,18 +72,18 @@ static CGFloat const kInitialSpringVelocity = 0.5f;
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 usingSpringWithDamping:kDamping initialSpringVelocity:kInitialSpringVelocity options:0x00 animations:^{
         fromViewController.view.transform = travel;
-        fromViewController.view.alpha = 0;
         toViewController.view.transform = CGAffineTransformIdentity;
         toViewController.view.alpha = 1;
     } completion:^(BOOL finished) {
         fromViewController.view.transform = CGAffineTransformIdentity;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
     }];
-    
-    
+*/
+
 }
 
 - (void)dismissAnimation:(id<UIViewControllerContextTransitioning>)transitionContext {
+    //pop xxx
     
 }
 
@@ -91,7 +91,7 @@ static CGFloat const kInitialSpringVelocity = 0.5f;
 #pragma mark -- UIViewControllerAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
-    return 0.3f;
+    return 0.5f;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
@@ -111,7 +111,6 @@ static CGFloat const kInitialSpringVelocity = 0.5f;
 #pragma mark -- UIViewControllerInteractiveTransitioning 
 
 - (void)startInteractiveTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
-    
     
 }
 
